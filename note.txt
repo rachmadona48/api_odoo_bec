@@ -1,0 +1,8 @@
+Proses Refund DP:
+1. Create payment customer
+	payment type : send money
+	partner type : customer
+2. lalu validate payment
+3. create reconcile terhadap customer tsb
+	nilai harus minus (Ex: - 5.000,-)
+	lawankan terhadap sisa dp awal
