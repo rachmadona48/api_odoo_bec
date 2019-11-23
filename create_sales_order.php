@@ -27,15 +27,17 @@ $order = $models->execute_kw($db, $uid, $password,
 
 // line transaksi silakan di looping
 $product_id         = 3241; #id product
-$quantity           = 3;
+$quantity           = 1;
 $discount           = 0;
+$price_unit         = 3000000;
 
 $line = $models->execute_kw($db, $uid, $password,
     'sale.order.line', 'create',
     array(array('order_id'          => $order,
                 'product_id'        => $product_id,
                 'product_uom_qty'   => $quantity,
-                'discount'          => $discount
+                'discount'          => $discount,
+                'price_unit'        => $price_unit
                 
     )));
 

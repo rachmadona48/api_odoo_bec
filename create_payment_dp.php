@@ -15,10 +15,11 @@ $payment_method_id  = 1;
 
 // silakan sesuaikan
 $id_customer 		= 651;
-$amount 			= 6000000;
+$amount 			= 600000;
 $id_journal_payment = 10;
 $payment_date 		= '29/11/2019';
 $memo				= 'Dp awal';
+// silakan sesuaikan
 
 $data = $models->execute_kw($db, $uid, $password,
     'account.payment', 'create',

@@ -1,0 +1,9 @@
+Proses Refund DP:
+1. Create payment customer
+	- buat jurnal pembayaran,lalu cek jurnal api : jurnal_payment.php
+	- id customer dari master customer
+	file : create_payment_dp.php
+2. validate payment dp (kondisi cash)
+    - ambil id payment proses no 1 untuk parameter
+3. Create so/invoice
+	file : create_sales_order.php
