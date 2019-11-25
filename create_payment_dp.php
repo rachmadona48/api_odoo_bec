@@ -13,9 +13,11 @@ $payment_type       = 'inbound';
 $partner_type       = 'customer';
 $payment_method_id  = 1;
 
+
 // silakan sesuaikan
+$id_simrs           = 10; /*id dari simrs untuk disimpan pada odoo*/
 $id_customer 		= 651;
-$amount 			= 600000;
+$amount 			= 500000;
 $id_journal_payment = 10;
 $payment_date 		= '29/11/2019';
 $memo				= 'Dp awal';
@@ -23,7 +25,8 @@ $memo				= 'Dp awal';
 
 $data = $models->execute_kw($db, $uid, $password,
     'account.payment', 'create',
-    array(array('payment_type'	=> $payment_type,
+    array(array('id_simrs'      => $id_simrs,
+                'payment_type'	=> $payment_type,
     			'partner_type'	=> $partner_type,
     			'partner_id'	=> $id_customer,
     			'amount'		=> $amount,

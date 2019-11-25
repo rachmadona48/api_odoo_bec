@@ -5,5 +5,5 @@ Proses Refund DP:
 	file : create_payment_dp.php
 2. validate payment dp (kondisi cash)
     - ambil id payment proses no 1 untuk parameter
-3. Create so/invoice
-	file : create_sales_order.php
+3. Create invoice
+	file : create_invoice.php

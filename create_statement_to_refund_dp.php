@@ -12,19 +12,21 @@ $models = ripcord::client("$url/xmlrpc/2/object");
 $user               = $uid;
 
 // silakan sesuaikan
+$id_simrs           = 10; /*id dari simrs untuk disimpan pada odoo*/
 $journal_id         = 19;
 
 
 $statement_id = $models->execute_kw($db, $uid, $password,
     'account.bank.statement', 'create',
     array(array(
+                'id_simrs'          => $id_simrs,
     			'journal_id'	    => $journal_id
 	)));
 // $statement_id =343;
 
 // line transaksi silakan di looping
-$date           = '2019-11-30';
-$name           = 'pengembalian dp';
+$date           = '2019-11-25';
+$name           = 'pengembalian dp tes lagi';
 $partner_id     = 651;
 $amount         = -250000;
 
