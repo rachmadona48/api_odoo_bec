@@ -12,11 +12,11 @@ $models = ripcord::client("$url/xmlrpc/2/object");
 $payment_method_id = 1; #jangan di ganti
 
 $id_invoice = 23; #id dari invoice yang akan di validate
-$partner_id = 105;
+$partner_id = 105; #id penjamin / pasien yang melakukan pembayaran
 $payment_date = '2019-11-26';
 $amount = 1000000;
-$journal_id = 19; #id jurnal
-$communication = 'pembayaran invoice';
+$journal_id = 19; #id jurnal (cash/bank)
+$communication = 'pembayaran invoice'; #keterangan pembayaran
 $payment_id = $models->execute_kw($db, $uid, $password, 'account.payment', 'create',
  	array(array(
     'payment_date' => $payment_date,
