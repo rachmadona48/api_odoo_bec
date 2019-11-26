@@ -14,6 +14,10 @@ $user               = $uid;
 
 // silakan sesuaikan
 $id_simrs           = 10; /*id dari simrs untuk disimpan pada odoo*/
+$kd_t_simrs         = 'T1'; /*kode T dari simrs untuk disimpan pada odoo*/
+$no_inv_simrs       = 'INV/SIMRS/1'; /*no invoice dari simrs untuk disimpan pada odoo*/
+$no_tagihan_simrs   = 'Tag/1'; /*no tagihan dari simrs untuk disimpan pada odoo*/
+
 $id_customer 		= 651;
 $patient_id         = 1484;
 $payment_term_id    = 1;
@@ -24,6 +28,9 @@ $date_due           = '2019-11-16';
 $invoice = $models->execute_kw($db, $uid, $password,
     'account.invoice', 'create',
     array(array('id_simrs'          => $id_simrs,
+                'kd_t_simrs'        => $kd_t_simrs,
+                'no_inv_simrs'      => $no_inv_simrs,
+                'no_tagihan_simrs'  => $no_tagihan_simrs,
                 'type'              => $type,
     			'partner_id'	    => $id_customer,
                 'patient_id'        => $patient_id,
