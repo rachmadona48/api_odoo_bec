@@ -14,7 +14,7 @@ $data = $models->execute_kw($db, $uid, $password,
     'account.account', 'search_read',
     array(array(array('deprecated', '=', false)
             )),
-    array('fields'=>array('id','code','name','user_type_id')));
+    array('fields'=>array('id','code','name','user_type_id','id_simrs')));
 
 // print_r($data);
 echo json_encode($data)
