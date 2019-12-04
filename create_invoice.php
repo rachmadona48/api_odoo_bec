@@ -13,13 +13,13 @@ $type       = 'out_invoice';
 $user               = $uid;
 
 // silakan sesuaikan
-$id_simrs           = 10; /*id dari simrs untuk disimpan pada odoo*/
+$id_simrs           = '10'; /*id dari simrs untuk disimpan pada odoo*/
 $kd_t_simrs         = 'T1'; /*kode T dari simrs untuk disimpan pada odoo*/
 $no_inv_simrs       = 'INV/SIMRS/1'; /*no invoice dari simrs untuk disimpan pada odoo*/
 $no_tagihan_simrs   = 'Tag/1'; /*no tagihan dari simrs untuk disimpan pada odoo*/
 
-$id_customer 		= 651;
-$patient_id         = 1484;
+$id_customer 		= 9;
+$patient_id         = 10;
 $payment_term_id    = 1;
 $date_invoice       = '2019-11-16';
 $date_due           = '2019-11-16';
@@ -43,11 +43,11 @@ $invoice = $models->execute_kw($db, $uid, $password,
 // $invoice =193;
 
 // line transaksi silakan di looping
-$product_id         = 3241; #id product
-$name               = 'Urban Farming - SD 4-6'; #nama product dari master product
+$product_id         = 1; #id product
+$name               = 'Obat'; #nama product dari master product
 $account_id         = 17; #COA income
 $quantity           = 1;
-$price_unit         = 1300000; #silakan ambil sell price dari master product
+$price_unit         = 1200000; #silakan ambil sell price dari master product
 $discount           = 0;
 
 // $id_tax             = 0; #dari master tax
