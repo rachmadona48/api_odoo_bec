@@ -23,7 +23,7 @@ $data = $models->execute_kw($db, $uid, $password,
     'account.invoice', 'search_read',
     array(array(array('number', '=', $invoice_number)
             )),
-    array('fields'=>array('id','number','partner_id','patient_id','state')));
+    array('fields'=>array('id','number','partner_id','patient_id','state','account_hpp_id')));
 
 echo json_encode($data)
 
