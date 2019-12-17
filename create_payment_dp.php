@@ -16,8 +16,9 @@ $payment_method_id  = 1;
 
 // silakan sesuaikan
 $id_simrs           = 10; /*id dari simrs untuk disimpan pada odoo*/
-$id_customer 		= 651;
-$amount 			= 500000;
+$id_customer 		= 96; /*id penjamin*/
+$patient_id        = 98; /*id pasien*/
+$amount 			= 550000;
 $id_journal_payment = 10;
 $payment_date 		= '29/11/2019';
 $memo				= 'Dp awal';
@@ -29,6 +30,7 @@ $data = $models->execute_kw($db, $uid, $password,
                 'payment_type'	=> $payment_type,
     			'partner_type'	=> $partner_type,
     			'partner_id'	=> $id_customer,
+                'patient_id'    => $patient_id,
     			'amount'		=> $amount,
     			'journal_id'	=> $id_journal_payment,
     			'payment_date'	=> $payment_date,
