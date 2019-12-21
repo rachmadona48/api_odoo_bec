@@ -16,9 +16,9 @@ $payment_method_id  = 1;
 
 // silakan sesuaikan
 $id_simrs           = 10; /*id dari simrs untuk disimpan pada odoo*/
-$id_customer 		= 96; /*id penjamin*/
-$patient_id        = 98; /*id pasien*/
-$amount 			= 550000;
+$id_customer 		= 104; /*id penjamin*/
+$patient_id        = 90; /*id pasien*/
+$amount 			= 600000;
 $id_journal_payment = 10;
 $payment_date 		= '29/11/2019';
 $memo				= 'Dp awal';

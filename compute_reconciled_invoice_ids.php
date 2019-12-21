@@ -9,8 +9,8 @@ $common->version();
 $uid = $common->authenticate($db, $username, $password, array());
 $models = ripcord::client("$url/xmlrpc/2/object");
 
-$id_payment = 75; #id payment dp
-$id_invoice = 109; #id invoice yang akan dibayarkan dengan dp
+$id_payment = 82; #id payment dp
+$id_invoice = 115; #id invoice yang akan dibayarkan dengan dp
 
 $account_move_line = $models->execute_kw($db, $uid, $password,
     'account.move.line', 'search_read',

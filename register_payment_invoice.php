@@ -33,7 +33,7 @@ $payment_id = $models->execute_kw($db, $uid, $password, 'account.payment', 'crea
     
     )));
 
-#jika return = Sukses maka baca number dari data_return
+
 $data_validate = $models->execute_kw($db, $uid, $password,'account.payment', 'action_validate_invoice_payment', [$payment_id]);
 $data_return = $models->execute_kw($db, $uid, $password,
     'account.payment', 'search_read',

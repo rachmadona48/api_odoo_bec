@@ -10,7 +10,7 @@ $uid = $common->authenticate($db, $username, $password, array());
 $models = ripcord::client("$url/xmlrpc/2/object");
 $user               = $uid;
 
-$id_invoice_odoo       = 33; /*id invoice yang sudah validate*/
+$id_invoice_odoo       = 115; /*id invoice yang sudah validate*/
 $data_invoice = $models->execute_kw($db, $uid, $password,
     'account.invoice', 'search_read',
     array(array(array('id', '=', $id_invoice_odoo)
@@ -40,7 +40,7 @@ $l1 = $models->execute_kw($db, $uid, $password,
     'account.move.line', 'create',
     array(array('move_id'    => $move,
                 'account_id' => 6,
-                'debit'      => 100000
+                'debit'      => 150000
                 
     )),
     array('context' => array('check_move_validity' =>  False))
@@ -51,7 +51,7 @@ $l2 = $models->execute_kw($db, $uid, $password,
     'account.move.line', 'create',
     array(array('move_id'    => $move,
                 'account_id' => 4,
-                'credit'     => 100000
+                'credit'     => 150000
                 
     )),
     array('context' => array('check_move_validity' =>  False))
