@@ -9,7 +9,7 @@ $common->version();
 $uid = $common->authenticate($db, $username, $password, array());
 $models = ripcord::client("$url/xmlrpc/2/object");
 
-$id_invoice = 115; #id invoice yang akan dicancel
+$id_invoice = 117; #id invoice yang akan dicancel
 
 $data = $models->execute_kw($db, $uid, $password,'account.invoice', 'action_cancel_via_service', [$id_invoice]);
 // echo json_encode($data); 

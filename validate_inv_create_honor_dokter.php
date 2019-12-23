@@ -21,7 +21,7 @@ $invoice = json_decode(json_encode($data_invoice));
 
 
 $ref        = $invoice[0]->number; /*no invoice yang ada pada odoo*/
-$journal_id = 24; /*id stock jurnal odoo di prod 24*/
+$journal_id = 27; /*id hnr jurnal honor dokter di prod 26*/
 // silakan sesuaikan
 $date       = '2019-12-23';
 
@@ -39,7 +39,7 @@ $move = $models->execute_kw($db, $uid, $password,
 $l1 = $models->execute_kw($db, $uid, $password,
     'account.move.line', 'create',
     array(array('move_id'    => $move,
-                'account_id' => 6,
+                'account_id' => 62651,
                 'debit'      => 150000
                 
     )),
@@ -50,7 +50,7 @@ $l1 = $models->execute_kw($db, $uid, $password,
 $l2 = $models->execute_kw($db, $uid, $password,
     'account.move.line', 'create',
     array(array('move_id'    => $move,
-                'account_id' => 4,
+                'account_id' => 61645,
                 'credit'     => 150000
                 
     )),
@@ -69,13 +69,13 @@ echo json_encode($data_validate);
 /*jika state = post maka update id move(jurnal inventory) ke invoice*/ 
 
 $update_inventory_hpp = $models->execute_kw($db, $uid, $password, 'account.invoice', 'write',
-    array(array($id_invoice_odoo), array('account_hpp_id'=>intval($move))));
+    array(array($id_invoice_odoo), array('account_hnr_dokter_id'=>intval($move))));
 
 $data_invoice_cek_hpp_id = $models->execute_kw($db, $uid, $password,
     'account.invoice', 'search_read',
     array(array(array('id', '=', $id_invoice_odoo)
             )),
-    array('fields'=>array('id','number','account_hpp_id')));
+    array('fields'=>array('id','number','account_hnr_dokter_id')));
 echo json_encode($data_invoice_cek_hpp_id);
 /*jika account_hpp_id sudah ada maka jurnal inventory dan invoice sudah terbentuk relationnya*/ 
 

@@ -9,7 +9,7 @@ $common->version();
 $uid = $common->authenticate($db, $username, $password, array());
 $models = ripcord::client("$url/xmlrpc/2/object");
 
-$id_invoice = 115; #id dari invoice yang akan di validate
+$id_invoice = 117; #id dari invoice yang akan di validate
 
 $data = $models->execute_kw($db, $uid, $password,'account.invoice', 'action_invoice_open', [$id_invoice]);
 
