@@ -9,32 +9,28 @@ $common->version();
 $uid = $common->authenticate($db, $username, $password, array());
 $models = ripcord::client("$url/xmlrpc/2/object");
 
-$type       = 'out_invoice'; //in_invoice
-$user               = $uid;
+$type       = 'in_invoice';
+$journal_id = 2; /*journal vendor bill*/
+$user       = $uid;
 
 // silakan sesuaikan
-$id_simrs           = '10'; /*id dari simrs untuk disimpan pada odoo*/
-$kd_t_simrs         = 'T1'; /*kode T dari simrs untuk disimpan pada odoo*/
-$no_inv_simrs       = 'INV/SIMRS/1'; /*no invoice dari simrs untuk disimpan pada odoo*/
-$no_tagihan_simrs   = 'Tag/1'; /*no tagihan dari simrs untuk disimpan pada odoo*/
+$account_id      = 6164; /*coa AP*/
+$id_simrs        = '10'; /*id dari simrs untuk disimpan pada odoo*/
+$no_bapb_simrs   = 'BAPB/1'; /*no BAPB dari simrs untuk disimpan pada odoo*/
+$no_faktur_simrs = 'Faktur/1'; /*no faktur dari simrs untuk disimpan pada odoo*/
 
-$id_customer 		= 106;
-$patient_id         = 90;
-$payment_term_id    = 1;
-$date_invoice       = '2019-12-23';
-$date_due           = '2019-12-23';
+$id_vendor 		    = 106;
+$date_invoice       = '2020-01-04';
+$date_due           = '2020-01-10';
 
 
 $invoice = $models->execute_kw($db, $uid, $password,
     'account.invoice', 'create',
     array(array('id_simrs'          => $id_simrs,
-                'kd_t_simrs'        => $kd_t_simrs,
-                'no_inv_simrs'      => $no_inv_simrs,
-                'no_tagihan_simrs'  => $no_tagihan_simrs,
+                'no_bapb_simrs'     => $no_bapb_simrs,
+                'no_faktur_simrs'   => $no_faktur_simrs,
                 'type'              => $type,
-    			'partner_id'	    => $id_customer,
-                'patient_id'        => $patient_id,
-                'payment_term_id'   => $payment_term_id,
+    			'partner_id'	    => $id_vendor,
                 'date_invoice'      => $date_invoice,
                 'date_due'          => $date_due,
                 'user_id'           => $user
@@ -43,11 +39,11 @@ $invoice = $models->execute_kw($db, $uid, $password,
 // $invoice =193;
 
 // line transaksi silakan di looping
-$product_id         = 1; #id product
-$name               = 'Obat'; #nama product dari master product
-$account_id         = 17; #COA income
+$product_id         = 49; #id product
+$name               = 'Alat kesehatan'; #nama product dari master product
+$account_id         = 17; #COA expenses
 $quantity           = 1;
-$price_unit         = 850000; #silakan ambil sell price dari master product
+$price_unit         = 100000; #silakan ambil sell price dari master product
 $discount           = 0;
 
 // $id_tax             = 0; #dari master tax

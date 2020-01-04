@@ -9,8 +9,8 @@ $common->version();
 $uid = $common->authenticate($db, $username, $password, array());
 $models = ripcord::client("$url/xmlrpc/2/object");
 
-$payment_type       = 'inbound';
-$partner_type       = 'customer';
+$payment_type       = 'inbound'; //outbound
+$partner_type       = 'customer'; //supplier
 $payment_method_id  = 1;
 
 
