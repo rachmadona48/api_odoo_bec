@@ -18,11 +18,11 @@ $kd_t_simrs         = 'T1'; /*kode T dari simrs untuk disimpan pada odoo*/
 $no_inv_simrs       = 'INV/SIMRS/1'; /*no invoice dari simrs untuk disimpan pada odoo*/
 $no_tagihan_simrs   = 'Tag/1'; /*no tagihan dari simrs untuk disimpan pada odoo*/
 
-$id_customer 		= 106;
-$patient_id         = 90;
+$id_customer 		= 96;
+$patient_id         = 96;
 $payment_term_id    = 1;
-$date_invoice       = '2019-12-23';
-$date_due           = '2019-12-23';
+$date_invoice       = '2020-01-23';
+$date_due           = '2020-01-23';
 
 
 $invoice = $models->execute_kw($db, $uid, $password,
@@ -43,11 +43,11 @@ $invoice = $models->execute_kw($db, $uid, $password,
 // $invoice =193;
 
 // line transaksi silakan di looping
-$product_id         = 1; #id product
-$name               = 'Obat'; #nama product dari master product
+$product_id         = 25; #id product
+$name               = 'PENDAPATAN TINDAKAN R. ANYELIR'; #nama product dari master product
 $account_id         = 17; #COA income
 $quantity           = 1;
-$price_unit         = 850000; #silakan ambil sell price dari master product
+$price_unit         = 850000.11; #silakan ambil sell price dari master product
 $discount           = 0;
 
 // $id_tax             = 0; #dari master tax

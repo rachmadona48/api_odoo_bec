@@ -9,8 +9,8 @@ $common->version();
 $uid = $common->authenticate($db, $username, $password, array());
 $models = ripcord::client("$url/xmlrpc/2/object");
 
-$payment_type       = 'inbound'; //outbound
-$partner_type       = 'customer'; //supplier
+$payment_type       = 'inbound'; //repayment_ar
+$partner_type       = 'customer';
 $payment_method_id  = 1;
 
 
@@ -21,7 +21,7 @@ $patient_id        = 90; /*id pasien*/
 $amount 			= 600000;
 $id_journal_payment = 10;
 $payment_date 		= '29/11/2019';
-$memo				= 'Dp awal';
+$memo				= 'pelunasan invoice';
 // silakan sesuaikan
 
 $data = $models->execute_kw($db, $uid, $password,
